@@ -120,7 +120,7 @@ export const EditButton = styled.button`
   width: 72px;
 
   &:hover {
-    background-color: #fccf39;
+    background-color: #394cfc;
   }
 `;
 
