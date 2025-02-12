@@ -2,12 +2,12 @@
 export const theme = {
     colors: {
       background: '#000000',
-      primary: '#5a4dc7',     // Azul suave
-      secondary: '#6b19d6',   // Azul mais escuro
-      accent: '#F6C90E',      // Amarelo vivo
-      text: '#b7b8b6',           // Texto principal
-      textLight: '#ffffff',      // Texto claro
-      danger: '#E74C3C'       // Vermelho de alerta
+      primary: '#5a4dc7',     
+      secondary: '#6b19d6',   
+      accent: '#F6C90E',      
+      text: '#b7b8b6',          
+      textLight: '#ffffff',      
+      danger: '#E74C3C'       
     },
     fonts: {
       main: "'Inter', sans-serif", 
@@ -19,7 +19,7 @@ export const theme = {
       lg: '1.25rem',
       xl: '1.5rem'
     },
-    spacing: (factor: number) => `${0.25 * factor}rem`, // Ex.: spacing(4) => "1rem"
+    spacing: (factor: number) => `${0.25 * factor}rem`, 
     borderRadius: '6px',
     breakpoints: {
       mobile: '480px',

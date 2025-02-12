@@ -1,4 +1,3 @@
-// App.tsx
 import { useState } from 'react';
 import styled from 'styled-components';
 import ContactForm from './components/ContactForm';

@@ -1,5 +1,3 @@
-// ContactList.styled.ts
-
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -108,7 +106,7 @@ export const EditButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #fccf39; /* um tom próximo do accent */
+    background-color: #fccf39; 
   }
 `;
 
@@ -122,6 +120,6 @@ export const RemoveButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #c0392b; /* tom mais escuro do danger */
+    background-color: #c0392b; 
   }
 `;

@@ -1,15 +1,13 @@
-// src/styles/GlobalStyles.ts
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  /* Reset básico */
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 
-  /* Fonte base */
   html {
     font-family: ${({ theme }) => theme.fonts.main};
     font-size: 16px;
@@ -22,13 +20,13 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Remover estilo padrão de botões */
+
   button {
     font-family: inherit;
     background: none;
     border: none;
   }
-  /* Links sem sublinhado por padrão */
+
   a {
     text-decoration: none;
     color: inherit;

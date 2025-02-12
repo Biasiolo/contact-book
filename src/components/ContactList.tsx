@@ -1,12 +1,10 @@
-// ContactList.tsx
-
 import { useState, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import ReactPaginate from 'react-paginate'; // <<<< ALTERAÇÃO: import
+import ReactPaginate from 'react-paginate';
 import { RootState } from '../store';
 import { removeContact, Contact } from '../store/slices/contactSlice';
 
-// Importamos aqui todos os styled components
+
 import {
     Container,
     SearchContainer,
@@ -34,10 +32,8 @@ export default function ContactList({ onEditContact }: ContactListProps) {
 
     const [currentPage, setCurrentPage] = useState(0);
 
-    // Quantidade máxima de contatos por página
     const itemsPerPage = 5;
 
-    // 1) Filtra contatos pelo campo de busca
     const filteredContacts = useMemo(() => {
         return contacts.filter((c) =>
             c.fullName.toLowerCase().includes(search.toLowerCase()) ||

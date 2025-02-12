@@ -1,4 +1,3 @@
-// ContactForm.styled.ts
 import styled from 'styled-components';
 
 export const Card = styled.form`
