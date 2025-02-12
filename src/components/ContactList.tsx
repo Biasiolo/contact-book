@@ -35,7 +35,7 @@ export default function ContactList({ onEditContact }: ContactListProps) {
     const [currentPage, setCurrentPage] = useState(0);
 
     // Quantidade máxima de contatos por página
-    const itemsPerPage = 6;
+    const itemsPerPage = 5;
 
     // 1) Filtra contatos pelo campo de busca
     const filteredContacts = useMemo(() => {
