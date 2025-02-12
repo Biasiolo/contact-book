@@ -4,7 +4,6 @@ import ReactPaginate from 'react-paginate';
 import { RootState } from '../store';
 import { removeContact, Contact } from '../store/slices/contactSlice';
 
-
 import {
     Container,
     SearchContainer,
@@ -12,8 +11,13 @@ import {
     Input,
     TabsContainer,
     TabButton,
-    ContactCard,
-    ContactInfo,
+    TableContainer,
+    Table,
+    TableHeader,
+    TableHeader2,
+    TableRow,
+    TableCell,
+    TableCell2,
     Actions,
     EditButton,
     RemoveButton
@@ -29,7 +33,6 @@ export default function ContactList({ onEditContact }: ContactListProps) {
 
     const [search, setSearch] = useState('');
     const [selectedLetter, setSelectedLetter] = useState<string>('');
-
     const [currentPage, setCurrentPage] = useState(0);
 
     const itemsPerPage = 5;
@@ -50,7 +53,6 @@ export default function ContactList({ onEditContact }: ContactListProps) {
         });
         return Array.from(uniqueLetters).sort();
     }, [filteredContacts]);
-
 
     const contactsByLetter = useMemo(() => {
         if (!selectedLetter) return filteredContacts;
@@ -90,7 +92,6 @@ export default function ContactList({ onEditContact }: ContactListProps) {
             </SearchContainer>
 
             <TabsContainer>
-                {/* Aba para "Todos" */}
                 <TabButton
                     key="all-contacts"
                     active={selectedLetter === ''}
@@ -107,7 +108,6 @@ export default function ContactList({ onEditContact }: ContactListProps) {
                         key={letter}
                         active={selectedLetter === letter}
                         onClick={() => {
-
                             setSelectedLetter(selectedLetter === letter ? '' : letter);
                             setCurrentPage(0);
                         }}
@@ -117,27 +117,38 @@ export default function ContactList({ onEditContact }: ContactListProps) {
                 ))}
             </TabsContainer>
 
-            <ul>
-                {contactsPaginated.map((contact: Contact) => (
-                    <ContactCard key={contact.id}>
-                        <ContactInfo>
-                            <strong>{contact.fullName}</strong>
-                            <span>{contact.email}</span>
-                            <span>{contact.phone}</span>
-                        </ContactInfo>
-
-                        <Actions>
-                            <EditButton onClick={() => onEditContact?.(contact)}>
-                                Editar
-                            </EditButton>
-                            <RemoveButton onClick={() => handleRemoveContact(contact.id)}>
-                                Remover
-                            </RemoveButton>
-                        </Actions>
-                    </ContactCard>
-                ))}
-            </ul>
-
+            {/* Tabela de Contatos */}
+            <TableContainer>
+                <Table>
+                    <thead>
+                        <TableRow header>
+                            <TableHeader>Nome</TableHeader>
+                            <TableHeader2>Telefone</TableHeader2>
+                            <TableHeader2>Email</TableHeader2>
+                            <TableHeader></TableHeader>
+                        </TableRow>
+                    </thead>
+                    <tbody>
+                        {contactsPaginated.map((contact: Contact) => (
+                            <TableRow key={contact.id}>
+                                <TableCell>{contact.fullName}</TableCell>
+                                <TableCell2>{contact.phone}</TableCell2>
+                                <TableCell2>{contact.email}</TableCell2>
+                                <TableCell>
+                                    <Actions>
+                                        <EditButton onClick={() => onEditContact?.(contact)}>
+                                            Editar
+                                        </EditButton>
+                                        <RemoveButton onClick={() => handleRemoveContact(contact.id)}>
+                                            Remover
+                                        </RemoveButton>
+                                    </Actions>
+                                </TableCell>
+                            </TableRow>
+                        ))}
+                    </tbody>
+                </Table>
+            </TableContainer>
 
             {pageCount > 1 && (
                 <ReactPaginate

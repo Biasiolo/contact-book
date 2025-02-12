@@ -7,12 +7,12 @@ import { Contact } from './store/slices/contactSlice';
 
 const AppContainer = styled.div`
   max-width: 1200px;
-  margin: 36px auto;
+  margin: 8px auto;
   padding: ${({ theme }) => theme.spacing(4)};
 `;
 
 const Title = styled.h1`
-  color: #6b19d6;
+  color: #ffffff;
   font-size: ${({ theme }) => theme.fontSizes.xl};
   text-align: center;
   margin-bottom: ${({ theme }) => theme.spacing(4)};

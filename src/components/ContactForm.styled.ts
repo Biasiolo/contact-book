@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Card = styled.form`
-  background-color: #272727;
+  background-color: #000000;
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
@@ -41,8 +41,10 @@ export const Button = styled.button`
   padding: ${({ theme }) => theme.spacing(2)};
   border-radius: ${({ theme }) => theme.borderRadius};
   font-size: ${({ theme }) => theme.fontSizes.md};
+  font-weight: 400;
   transition: background-color 0.2s ease;
   cursor: pointer;
+  margin-top: 12px;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.secondary};

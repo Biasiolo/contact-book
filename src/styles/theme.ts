@@ -1,16 +1,16 @@
 // src/styles/theme.ts
 export const theme = {
     colors: {
-      background: '#000000',
+      background: '#476177',
       primary: '#5a4dc7',     
       secondary: '#6b19d6',   
-      accent: '#F6C90E',      
+      accent: '#ffd753',      
       text: '#b7b8b6',          
       textLight: '#ffffff',      
       danger: '#E74C3C'       
     },
     fonts: {
-      main: "'Inter', sans-serif", 
+      main: "'Roboto', sans-serif", 
     },
     fontSizes: {
       xs: '0.75rem',
@@ -20,7 +20,7 @@ export const theme = {
       xl: '1.5rem'
     },
     spacing: (factor: number) => `${0.25 * factor}rem`, 
-    borderRadius: '6px',
+    borderRadius: '24px',
     breakpoints: {
       mobile: '480px',
       tablet: '768px',
