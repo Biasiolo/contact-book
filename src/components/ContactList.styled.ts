@@ -85,6 +85,12 @@ export const ContactInfo = styled.span`
     flex-direction: row;
     gap: ${({ theme }) => theme.spacing(2)};
   }
+  strong {
+font-size: ${({ theme }) => theme.fontSizes.lg};
+font-weight: bold; /* Opcional, se quiser reforçar o destaque */
+color: #f3f2f7;
+text-shadow: 0 2px 4px #6a696d;
+}
 `;
 
 export const Actions = styled.div`
