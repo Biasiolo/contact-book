@@ -86,8 +86,8 @@ export const ContactInfo = styled.span`
   strong {
 font-size: ${({ theme }) => theme.fontSizes.lg};
 font-weight: bold; /* Opcional, se quiser reforçar o destaque */
-color: #f3f2f7;
-text-shadow: 0 2px 4px #6a696d;
+color: #d3d3d3;
+text-shadow: 0 2px 6px #6a696d;
 }
 `;
 
