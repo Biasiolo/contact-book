@@ -37,7 +37,8 @@ export const GlobalStyle = createGlobalStyle`
   gap: 0.5rem;
   list-style: none;
   justify-content: center;
-  margin-top: 1rem;
+  margin: 0 auto;
+  margin-top: 1.2rem;
 }
 
 .page-num {
@@ -45,10 +46,11 @@ export const GlobalStyle = createGlobalStyle`
   cursor: pointer;
   background-color: #eee;
   border-radius: 4px;
+  color: #03091a;
 }
 
 .page-num:hover {
-  background-color: #ddd;
+  background-color: #8a80e7;
 }
 
 .active .page-num {

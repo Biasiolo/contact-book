@@ -152,8 +152,8 @@ export default function ContactList({ onEditContact }: ContactListProps) {
 
             {pageCount > 1 && (
                 <ReactPaginate
-                    previousLabel={'← Anterior'}
-                    nextLabel={'Próximo →'}
+                    previousLabel={'◄ '}
+                    nextLabel={' ►'}
                     breakLabel={'...'}
                     pageCount={pageCount}
                     marginPagesDisplayed={1}

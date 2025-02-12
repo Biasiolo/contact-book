@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: 900px;
   margin: 0 auto;
+  
 `;
 
 export const SearchContainer = styled.div`
@@ -105,7 +106,7 @@ export const TableCell2 = styled.td`
 
 export const Actions = styled.div`
   display: flex;
-  gap: ${({ theme }) => theme.spacing(1)};
+  gap: ${({ theme }) => theme.spacing(2)};
   justify-content:end;
 `;
 
@@ -115,6 +116,8 @@ export const EditButton = styled.button`
   padding: ${({ theme }) => theme.spacing(1)} ${({ theme }) => theme.spacing(2)};
   border-radius: ${({ theme }) => theme.borderRadius};
   cursor: pointer;
+  font-weight: 400;
+  width: 72px;
 
   &:hover {
     background-color: #fccf39;
@@ -127,6 +130,8 @@ export const RemoveButton = styled.button`
   padding: ${({ theme }) => theme.spacing(1)} ${({ theme }) => theme.spacing(2)};
   border-radius: ${({ theme }) => theme.borderRadius};
   cursor: pointer;
+  font-weight: 400;
+  width: 72px;
 
   &:hover {
     background-color: #c0392b;

@@ -4,10 +4,10 @@ export const theme = {
       background: '#476177',
       primary: '#5a4dc7',     
       secondary: '#6b19d6',   
-      accent: '#ffd753',      
-      text: '#b7b8b6',          
+      accent: '#53c8ff',      
+      text: '#c9c9c9',          
       textLight: '#ffffff',      
-      danger: '#E74C3C'       
+      danger: '#fd4d5b'       
     },
     fonts: {
       main: "'Roboto', sans-serif", 
